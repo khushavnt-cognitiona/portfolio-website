@@ -1,0 +1,128 @@
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+
+nav {
+  background-color: red;
+  height: 100px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+}
+
+.avatar {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  border: 3px solid black;
+  background-image: url("/img/Snapchat-752709285.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.text-container {
+  display: flex;
+  flex-direction: column;
+  margin-left: 20px;
+  white-space: nowrap;
+  overflow: hidden;
+  
+  font-family: monospace;
+  animation: typing 4s steps(30, end) forwards;
+}
+
+
+.text-container h1, .text-container p {
+  font-size: 22px;
+  margin: 0;
+  animation: colorChange 3s infinite alternate;
+}
+
+
+@keyframes colorChange {
+  0% { color: #ff4d4d; }
+  25% { color: #ff9900; }
+  50% { color: #00ccff; }
+  75% { color: #66ff66; }
+  100% { color: #ff4d4d; }
+}
+
+ul {
+  display: flex;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  list-style: none;
+  margin-left: 20px;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+
+@keyframes typing {
+  from { width: 0 }
+  to { width: 28ch }
+}
+
+.main-cont {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 50px 100px;
+  flex-wrap: wrap;
+}
+
+.main-left {
+  max-width: 500px;
+}
+
+.main-left h1 {
+  font-size: 32px;
+  margin-bottom: 20px;
+}
+
+.main-left p {
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+
+.home-img {
+  width: 400px;
+  height: 400px;
+  border-radius: 50%;
+  object-fit: cover;
+  position: relative;
+  right: 200px;
+}
+
+
+footer {
+    background-color: #1e1e1e;
+    color: #fff;
+    padding: 20px 0;
+}
+
+footer a {
+    color: #fff;
+    margin: 0 10px;
+    font-size: 1.5rem;
+    transition: color 0.3s;
+}
+
+footer a:hover {
+    color: #0d6efd;
+}
