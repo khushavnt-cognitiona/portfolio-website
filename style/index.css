@@ -126,3 +126,72 @@ footer a {
 footer a:hover {
     color: #0d6efd;
 }
+
+@media (max-width: 992px) {
+  nav {
+    flex-direction: column;
+    height: auto;
+    padding: 15px;
+    text-align: center;
+  }
+
+  .avatar {
+    width: 80px;
+    height: 80px;
+  }
+
+  .text-container h1 {
+    font-size: 18px;
+  }
+
+  .text-container p {
+    font-size: 14px;
+  }
+
+  ul {
+    margin-top: 10px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  li {
+    margin: 5px 10px;
+  }
+
+  .main-cont {
+    flex-direction: column;
+    padding: 20px;
+    text-align: center;
+  }
+
+  .home-img {
+    width: 250px;
+    height: 250px;
+    right: 0;
+    margin-top: 20px;
+  }
+
+  .main-left h1 {
+    font-size: 24px;
+  }
+
+  .main-left p {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 576px) {
+  .home-img {
+    width: 180px;
+    height: 180px;
+  }
+
+  .main-left h1 {
+    font-size: 20px;
+  }
+
+  .main-left p {
+    font-size: 14px;
+  }
+}
+
