@@ -1,124 +1,396 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Services</title>
-  <script
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Professional Services offered by Khushvant Jadhao - Software Engineer">
+    <title>Services | Khushvant Jadhao</title>
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+      crossorigin="anonymous"
+    />
+    <!-- Font Awesome -->
+    <script
       src="https://kit.fontawesome.com/0f73b2d67c.js"
       crossorigin="anonymous"
     ></script>
-  <link 
-    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" 
-    rel="stylesheet"
-  >
-  <link rel="stylesheet" href="/style/servicess.css">
-  <link rel="stylesheet" href="./style/index.css">
-   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-  
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
-</head>
-<body>
- <nav>
-      <div class="d-flex align-items-center">
-        <div class="avatar"></div>
-        <div class="text-container">
-          <h1>Khushvant Jadhao</h1>
-          <p>Software Engineer</p>
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="./assets/css/main.css" />
+    <link rel="stylesheet" href="./assets/css/components.css" />
+    <link rel="stylesheet" href="./assets/css/dark-theme.css" />
+    <style>
+      .service-card {
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        margin-bottom: 2rem;
+        height: 100%;
+      }
+      .service-card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+      }
+      .service-icon {
+        font-size: 3rem;
+        margin-bottom: 1.5rem;
+        color: var(--primary-color);
+      }
+      .pricing-card {
+        border: 1px solid var(--border-color);
+        border-radius: 8px;
+        transition: transform 0.3s ease;
+        height: 100%;
+      }
+      .pricing-card:hover {
+        transform: scale(1.03);
+      }
+      .pricing-header {
+        background-color: var(--primary-color);
+        color: white;
+        padding: 1.5rem;
+        border-radius: 8px 8px 0 0;
+      }
+      .pricing-popular {
+        background-color: var(--accent-color);
+      }
+      .pricing-price {
+        font-size: 2.5rem;
+        font-weight: bold;
+      }
+      .pricing-features {
+        padding: 1.5rem;
+      }
+      .pricing-features li {
+        margin-bottom: 0.75rem;
+      }
+      .testimonial-card {
+        padding: 1.5rem;
+        margin-bottom: 2rem;
+        position: relative;
+      }
+      .testimonial-card::before {
+        content: '"';
+        font-size: 5rem;
+        position: absolute;
+        top: -10px;
+        left: 10px;
+        opacity: 0.1;
+        font-family: Georgia, serif;
+      }
+      .client-info {
+        display: flex;
+        align-items: center;
+        margin-top: 1rem;
+      }
+      .client-avatar {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        margin-right: 1rem;
+        object-fit: cover;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Navigation -->
+    <div class="container py-3">
+      <nav class="navbar">
+        <div class="navbar-brand">
+          <div class="avatar" style="background-image: url('./img/khushvantimg.jpg');"></div>
+          <div class="brand-text">
+            <h1>Khushvant Jadhao</h1>
+            <p>Software Engineer</p>
+          </div>
         </div>
-      </div>
-      <ul>
-        <li><a href="./index.html">Home</a></li>
-        <li><a href="./about.html">About</a></li>
-        <li><a href="./skills.html">Skills</a></li>
-        <li><a href="#">Services</a></li>
-        <li><a href="./Contact.html">Contact</a></li>
-
-      </ul>
-    </nav>
-
-  
-  <section class="text-center py-5 bg-light">
-    <div class="container">
-      <h1 class="display-4 fw-bold">My Services</h1>
-      
-      <p class="lead text-muted">I provide high-quality services to bring your ideas to life.</p>
+        
+        <button class="menu-toggle" aria-expanded="false" aria-label="Toggle navigation">
+          <i class="fas fa-bars"></i>
+        </button>
+        
+        <ul class="nav-menu">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="skills.html">Skills</a></li>
+          <li class="nav-item"><a class="nav-link" href="servicess.html">Services</a></li>
+          <li class="nav-item"><a class="nav-link" href="Contact.html">Contact</a></li>
+          <li class="nav-item">
+            <div class="theme-switch-wrapper">
+              <label class="theme-switch" for="theme-toggle">
+                <input type="checkbox" id="theme-toggle" />
+                <span class="slider"></span>
+              </label>
+            </div>
+          </li>
+        </ul>
+      </nav>
     </div>
-  </section>
 
-  
-  <section class="py-5">
-    <div class="container">
-      <div class="row g-4">
-        
-        <div class="col-md-4">
-          <div class="card h-100 shadow-sm service-card">
-            <div class="card-body text-center">
-              <div class="icon mb-3">
-                <i class="bi bi-laptop display-4 text-primary"></i>
-              </div>
-              <h5 class="card-title fw-bold">Web Development</h5>
-              <p class="card-text text-muted">
-                Responsive and modern websites using HTML, CSS, JavaScript, and Bootstrap.
-              </p>
-            </div>
-          </div>
-        </div>
-
-        
-        <div class="col-md-4">
-          <div class="card h-100 shadow-sm service-card">
-            <div class="card-body text-center">
-              <div class="icon mb-3">
-                <i class="bi bi-palette display-4 text-danger"></i>
-              </div>
-              <h5 class="card-title fw-bold">UI/UX Design</h5>
-              <p class="card-text text-muted">
-                Creative and user-friendly designs for websites and apps with modern trends.
-              </p>
-            </div>
-          </div>
-        </div>
-
-        
-        <div class="col-md-4">
-          <div class="card h-100 shadow-sm service-card">
-            <div class="card-body text-center">
-              <div class="icon mb-3">
-                <i class="bi bi-phone display-4 text-success"></i>
-              </div>
-              <h5 class="card-title fw-bold">Mobile App Development</h5>
-              <p class="card-text text-muted">
-                Cross-platform mobile apps using React Native with smooth performance.
-              </p>
-            </div>
-          </div>
-        </div>
+    <!-- Services Header -->
+    <section class="container py-4">
+      <div class="text-center mb-5">
+        <h1 class="display-4">My Services</h1>
+        <p class="lead">Professional solutions tailored to your needs</p>
       </div>
-
       
-      <div class="text-center mt-5">
-        <a href="#" class="btn btn-primary btn-lg  btn">Hire Me</a>
+      <!-- Services Cards -->
+      <div class="row">
+        <!-- Web Development -->
+        <div class="col-lg-4 col-md-6">
+          <div class="card service-card">
+            <div class="card-body text-center">
+              <i class="fas fa-laptop-code service-icon"></i>
+              <h3>Web Development</h3>
+              <p>Custom websites and web applications built with modern technologies and best practices.</p>
+              <ul class="list-unstyled text-left">
+                <li><i class="fas fa-check text-success mr-2"></i> Responsive Design</li>
+                <li><i class="fas fa-check text-success mr-2"></i> Frontend & Backend</li>
+                <li><i class="fas fa-check text-success mr-2"></i> E-commerce Solutions</li>
+                <li><i class="fas fa-check text-success mr-2"></i> CMS Integration</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Java Development -->
+        <div class="col-lg-4 col-md-6">
+          <div class="card service-card">
+            <div class="card-body text-center">
+              <i class="fab fa-java service-icon"></i>
+              <h3>Java Development</h3>
+              <p>Enterprise-grade Java applications and microservices with Spring Boot.</p>
+              <ul class="list-unstyled text-left">
+                <li><i class="fas fa-check text-success mr-2"></i> Spring Boot Applications</li>
+                <li><i class="fas fa-check text-success mr-2"></i> RESTful APIs</li>
+                <li><i class="fas fa-check text-success mr-2"></i> Microservices Architecture</li>
+                <li><i class="fas fa-check text-success mr-2"></i> Database Integration</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Database Design -->
+        <div class="col-lg-4 col-md-6">
+          <div class="card service-card">
+            <div class="card-body text-center">
+              <i class="fas fa-database service-icon"></i>
+              <h3>Database Design</h3>
+              <p>Efficient and scalable database solutions for your applications.</p>
+              <ul class="list-unstyled text-left">
+                <li><i class="fas fa-check text-success mr-2"></i> Schema Design</li>
+                <li><i class="fas fa-check text-success mr-2"></i> Query Optimization</li>
+                <li><i class="fas fa-check text-success mr-2"></i> Data Migration</li>
+                <li><i class="fas fa-check text-success mr-2"></i> Performance Tuning</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        
+        <!-- API Development -->
+        <div class="col-lg-4 col-md-6">
+          <div class="card service-card">
+            <div class="card-body text-center">
+              <i class="fas fa-code service-icon"></i>
+              <h3>API Development</h3>
+              <p>Robust and secure APIs that connect your systems and services.</p>
+              <ul class="list-unstyled text-left">
+                <li><i class="fas fa-check text-success mr-2"></i> RESTful APIs</li>
+                <li><i class="fas fa-check text-success mr-2"></i> GraphQL</li>
+                <li><i class="fas fa-check text-success mr-2"></i> Authentication & Security</li>
+                <li><i class="fas fa-check text-success mr-2"></i> Documentation</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        
+        <!-- UI/UX Design -->
+        <div class="col-lg-4 col-md-6">
+          <div class="card service-card">
+            <div class="card-body text-center">
+              <i class="fas fa-paint-brush service-icon"></i>
+              <h3>UI/UX Design</h3>
+              <p>User-centered design that enhances user experience and engagement.</p>
+              <ul class="list-unstyled text-left">
+                <li><i class="fas fa-check text-success mr-2"></i> Wireframing & Prototyping</li>
+                <li><i class="fas fa-check text-success mr-2"></i> Responsive Design</li>
+                <li><i class="fas fa-check text-success mr-2"></i> User Testing</li>
+                <li><i class="fas fa-check text-success mr-2"></i> Design Systems</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Consulting -->
+        <div class="col-lg-4 col-md-6">
+          <div class="card service-card">
+            <div class="card-body text-center">
+              <i class="fas fa-comments service-icon"></i>
+              <h3>Technical Consulting</h3>
+              <p>Expert advice on technology choices and implementation strategies.</p>
+              <ul class="list-unstyled text-left">
+                <li><i class="fas fa-check text-success mr-2"></i> Technology Assessment</li>
+                <li><i class="fas fa-check text-success mr-2"></i> Architecture Planning</li>
+                <li><i class="fas fa-check text-success mr-2"></i> Code Reviews</li>
+                <li><i class="fas fa-check text-success mr-2"></i> Performance Optimization</li>
+              </ul>
+            </div>
+          </div>
+        </div>
       </div>
-    </div>
-  </section>
-<footer class="text-center">
+    </section>
+    
+    <!-- Pricing Section -->
+    <section class="container py-5">
+      <h2 class="text-center mb-5">Pricing Plans</h2>
+      
+      <div class="row">
+        <!-- Basic Plan -->
+        <div class="col-lg-4 col-md-6 mb-4">
+          <div class="pricing-card">
+            <div class="pricing-header text-center">
+              <h3>Basic</h3>
+              <div class="pricing-price">$499</div>
+              <p>Perfect for small projects</p>
+            </div>
+            <ul class="pricing-features list-unstyled">
+              <li><i class="fas fa-check text-success mr-2"></i> Single Page Website</li>
+              <li><i class="fas fa-check text-success mr-2"></i> Responsive Design</li>
+              <li><i class="fas fa-check text-success mr-2"></i> 3 Revisions</li>
+              <li><i class="fas fa-check text-success mr-2"></i> Basic SEO</li>
+              <li><i class="fas fa-times text-danger mr-2"></i> Database Integration</li>
+              <li><i class="fas fa-times text-danger mr-2"></i> Custom API</li>
+            </ul>
+            <div class="text-center pb-4">
+              <a href="Contact.html" class="btn btn-outline-primary">Get Started</a>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Standard Plan -->
+        <div class="col-lg-4 col-md-6 mb-4">
+          <div class="pricing-card">
+            <div class="pricing-header pricing-popular text-center">
+              <h3>Standard</h3>
+              <div class="pricing-price">$999</div>
+              <p>For growing businesses</p>
+            </div>
+            <ul class="pricing-features list-unstyled">
+              <li><i class="fas fa-check text-success mr-2"></i> Multi-page Website</li>
+              <li><i class="fas fa-check text-success mr-2"></i> Responsive Design</li>
+              <li><i class="fas fa-check text-success mr-2"></i> 5 Revisions</li>
+              <li><i class="fas fa-check text-success mr-2"></i> Advanced SEO</li>
+              <li><i class="fas fa-check text-success mr-2"></i> Database Integration</li>
+              <li><i class="fas fa-times text-danger mr-2"></i> Custom API</li>
+            </ul>
+            <div class="text-center pb-4">
+              <a href="Contact.html" class="btn btn-primary">Get Started</a>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Premium Plan -->
+        <div class="col-lg-4 col-md-6 mb-4">
+          <div class="pricing-card">
+            <div class="pricing-header text-center">
+              <h3>Premium</h3>
+              <div class="pricing-price">$1999</div>
+              <p>For enterprise solutions</p>
+            </div>
+            <ul class="pricing-features list-unstyled">
+              <li><i class="fas fa-check text-success mr-2"></i> Custom Web Application</li>
+              <li><i class="fas fa-check text-success mr-2"></i> Responsive Design</li>
+              <li><i class="fas fa-check text-success mr-2"></i> Unlimited Revisions</li>
+              <li><i class="fas fa-check text-success mr-2"></i> Advanced SEO</li>
+              <li><i class="fas fa-check text-success mr-2"></i> Database Integration</li>
+              <li><i class="fas fa-check text-success mr-2"></i> Custom API</li>
+            </ul>
+            <div class="text-center pb-4">
+              <a href="Contact.html" class="btn btn-outline-primary">Get Started</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <!-- Testimonials -->
+    <section class="container py-5">
+      <h2 class="text-center mb-5">Client Testimonials</h2>
+      
+      <div class="row">
+        <div class="col-lg-4 col-md-6">
+          <div class="card testimonial-card">
+            <p class="testimonial-text">"Khushvant delivered our e-commerce platform ahead of schedule and exceeded our expectations. His attention to detail and technical expertise made our project a success."</p>
+            <div class="client-info">
+              <img src="./img/client1.jpg" alt="Client" class="client-avatar">
+              <div>
+                <h4 class="mb-0">John Smith</h4>
+                <p class="text-muted">CEO, TechStart</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="col-lg-4 col-md-6">
+          <div class="card testimonial-card">
+            <p class="testimonial-text">"Working with Khushvant was a pleasure. He understood our requirements perfectly and implemented a robust solution that has significantly improved our business processes."</p>
+            <div class="client-info">
+              <img src="./img/client2.jpg" alt="Client" class="client-avatar">
+              <div>
+                <h4 class="mb-0">Sarah Johnson</h4>
+                <p class="text-muted">CTO, InnovateCorp</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="col-lg-4 col-md-6">
+          <div class="card testimonial-card">
+            <p class="testimonial-text">"Khushvant's expertise in Java and Spring Boot helped us modernize our legacy system. His code is clean, well-documented, and easy to maintain. Highly recommended!"</p>
+            <div class="client-info">
+              <img src="./img/client3.jpg" alt="Client" class="client-avatar">
+              <div>
+                <h4 class="mb-0">Michael Chen</h4>
+                <p class="text-muted">Lead Developer, DataSys</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <!-- CTA Section -->
+    <section class="container py-5">
+      <div class="card bg-primary text-white">
+        <div class="card-body text-center py-5">
+          <h2 class="mb-3">Ready to start your project?</h2>
+          <p class="lead mb-4">Let's discuss how I can help bring your ideas to life.</p>
+          <a href="Contact.html" class="btn btn-light btn-lg">Contact Me</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
       <div class="container">
-        <p>Connect with me:</p>
-        <a href="https://www.instagram.com/engineer_khushvant" target="_blank"
-          ><i class="fab fa-instagram"></i
-        ></a>
-        <a href="https://www.linkedin.com/in/khushvantjadhao01/" target="_blank"
-          ><i class="fab fa-linkedin"></i
-        ></a>
-        <a href="https://github.com/yourusername" target="_blank"
-          ><i class="fab fa-github"></i
-        ></a>
-        <p class="mt-3">&copy; 2025 Khushvant Jadhao</p>
+        <div class="text-center">
+          <h3>Connect with me</h3>
+          <div class="social-links">
+            <a href="https://www.instagram.com/engineer_khushvant" target="_blank" class="social-link" aria-label="Instagram">
+              <i class="fab fa-instagram"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/khushvantjadhao01/" target="_blank" class="social-link" aria-label="LinkedIn">
+              <i class="fab fa-linkedin"></i>
+            </a>
+            <a href="https://github.com/khushavnt-cognitiona" target="_blank" class="social-link" aria-label="GitHub">
+              <i class="fab fa-github"></i>
+            </a>
+          </div>
+          <p class="mt-3">&copy; 2025 Khushvant Jadhao. All rights reserved.</p>
+        </div>
       </div>
     </footer>
-         
-  
- 
-</body>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="./assets/js/main.js"></script>
+  </body>
 </html>

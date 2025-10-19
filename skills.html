@@ -3,285 +3,325 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-
+    <meta name="description" content="Skills and Expertise of Khushvant Jadhao - Software Engineer">
+    <title>Skills | Khushvant Jadhao</title>
+    <!-- Bootstrap CSS -->
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
-      integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2"
       crossorigin="anonymous"
     />
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
-    />
-
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
-    />
-    <link rel="stylesheet" href="./style/index.css" />
-   <link rel="stylesheet" href="style/skills.css">
+    <!-- Font Awesome -->
+    <script
+      src="https://kit.fontawesome.com/0f73b2d67c.js"
+      crossorigin="anonymous"
+    ></script>
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="./assets/css/main.css" />
+    <link rel="stylesheet" href="./assets/css/components.css" />
+    <link rel="stylesheet" href="./assets/css/dark-theme.css" />
+    <style>
+      .skill-category {
+        margin-bottom: 3rem;
+      }
+      .skill-card {
+        height: 100%;
+        transition: transform 0.3s ease;
+      }
+      .skill-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+      }
+      .skill-icon {
+        font-size: 2.5rem;
+        margin-bottom: 1rem;
+        color: var(--primary-color);
+      }
+      .certificate-card {
+        margin-bottom: 1.5rem;
+        transition: transform 0.3s ease;
+      }
+      .certificate-card:hover {
+        transform: translateY(-5px);
+      }
+      .certificate-logo {
+        max-height: 50px;
+        margin-bottom: 1rem;
+      }
+    </style>
   </head>
   <body>
-    <nav>
-      <div class="d-flex align-items-center">
-        <div class="avatar"></div>
-        <div class="text-container">
-          <h1>Khushvant Jadhao</h1>
-          <p>Software Engineer</p>
-        </div>
-      </div>
-      <ul>
-        <li><a href="./index.html">Home</a></li>
-        <li><a href="./about.html">About</a></li>
-        <li><a href="#">skills</a></li>
-        <li><a href="./servicess.html">Services</a></li>
-        <li><a href="./Contact.html">Contact</a></li>
-
-      </ul>
-    </nav>
-
-    <div class="container my-5">
-      <h2 class="text-center mb-4 my-skills">My Skills</h2>
-      <div class="row">
-        <div class="col-md-3 mb-3">
-          <div class="card shadow-sm h-100 text-center">
-            <div class="card-body">
-              <i class="fab fa-html5 fa-3x text-danger mb-3"></i>
-              <h5 class="card-title">HTML</h5>
-              <p class="card-text">
-                Structured and semantic web page development.
-              </p>
-            </div>
+    <!-- Navigation -->
+    <div class="container py-3">
+      <nav class="navbar">
+        <div class="navbar-brand">
+          <div class="avatar" style="background-image: url('./img/khushvantimg.jpg');"></div>
+          <div class="brand-text">
+            <h1>Khushvant Jadhao</h1>
+            <p>Software Engineer</p>
           </div>
         </div>
-
-        <div class="col-md-3 mb-3">
-          <div class="card shadow-sm h-100 text-center">
-            <div class="card-body">
-              <i class="fab fa-css3-alt fa-3x text-primary mb-3"></i>
-              <h5 class="card-title">CSS</h5>
-              <p class="card-text">Responsive design and modern UI styling.</p>
+        
+        <button class="menu-toggle" aria-expanded="false" aria-label="Toggle navigation">
+          <i class="fas fa-bars"></i>
+        </button>
+        
+        <ul class="nav-menu">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="skills.html">Skills</a></li>
+          <li class="nav-item"><a class="nav-link" href="servicess.html">Services</a></li>
+          <li class="nav-item"><a class="nav-link" href="Contact.html">Contact</a></li>
+          <li class="nav-item">
+            <div class="theme-switch-wrapper">
+              <label class="theme-switch" for="theme-toggle">
+                <input type="checkbox" id="theme-toggle" />
+                <span class="slider"></span>
+              </label>
             </div>
-          </div>
-        </div>
-
-        <div class="col-md-3 mb-3">
-          <div class="card shadow-sm h-100 text-center">
-            <div class="card-body">
-              <i class="fab fa-java fa-3x text-warning mb-3"></i>
-              <h5 class="card-title">Java</h5>
-              <p class="card-text">
-                OOP, backend systems, enterprise applications.
-              </p>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-md-3 mb-3">
-          <div class="card shadow-sm h-100 text-center">
-            <div class="card-body">
-              <i class="fas fa-leaf fa-3x text-success mb-3"></i>
-              <h5 class="card-title">Spring Boot</h5>
-              <p class="card-text">Building REST APIs & microservices.</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-md-3 mb-3">
-          <div class="card shadow-sm h-100 text-center">
-            <div class="card-body">
-              <i class="fas fa-database fa-3x text-info mb-3"></i>
-              <h5 class="card-title">MySQL</h5>
-              <p class="card-text">Database design, queries & optimization.</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-md-3 mb-3">
-          <div class="card shadow-sm h-100 text-center">
-            <div class="card-body">
-              <i class="fas fa-project-diagram fa-3x text-secondary mb-3"></i>
-              <h5 class="card-title">Hibernate</h5>
-              <p class="card-text">ORM for mapping Java objects with DB.</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-md-3 mb-3">
-          <div class="card shadow-sm h-100 text-center">
-            <div class="card-body">
-              <i class="fas fa-code fa-3x text-dark mb-3"></i>
-              <h5 class="card-title">JPA</h5>
-              <p class="card-text">
-                Abstraction for persistence and data access.
-              </p>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-md-3 mb-3">
-          <div class="card shadow-sm h-100 text-center">
-            <div class="card-body">
-              <i class="fas fa-network-wired fa-3x text-primary mb-3"></i>
-              <h5 class="card-title">Microservices</h5>
-              <p class="card-text">
-                Designing & deploying service-oriented apps.
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
+          </li>
+        </ul>
+      </nav>
     </div>
 
-    <div class="container my-5">
-      <h2 class="text-center mb-4">Projects</h2>
-      <div class="row g-4">
-        <div class="col-md-4 col-sm-6">
-          <div class="card h-100 shadow-sm">
-            <img
-              src="./img/install-java-raspberry-pi-300x200.jpg"
-              class="card-img-top"
-              alt="..."
-            />
-            <div class="card-body text-center">
-              <h5 class="card-title">Java</h5>
-              <p class="card-text">
-                Strong foundation in object-oriented programming, backend
-                development, and enterprise applications.
-              </p>
-              <a
-                href="https://www.linkedin.com/in/khushvantjadhao01/"
-                class="btn btn-primary me-2"
-              >
-                Linkedin
-              </a>
-              <a
-                href="https://github.com/khushavnt-cognitiona/Hospital"
-                target="_blank"
-                class="btn btn-dark"
-              >
-                <i class="fab fa-github me-1"></i> Get Code
-              </a>
+    <!-- Skills Header -->
+    <section class="container py-4">
+      <div class="text-center mb-5">
+        <h1 class="display-4">My Skills & Expertise</h1>
+        <p class="lead">A comprehensive overview of my technical skills and professional competencies</p>
+      </div>
+      
+      <!-- Technical Skills with Progress Bars -->
+      <div class="skill-category">
+        <h2 class="mb-4">Technical Skills</h2>
+        
+        <div class="row">
+          <div class="col-md-6">
+            <div class="progress-container" data-value="90">
+              <div class="progress-label">
+                <span>HTML/CSS</span>
+                <span class="progress-percentage">90%</span>
+              </div>
+              <div class="progress">
+                <div class="progress-bar" role="progressbar" style="width: 90%"></div>
+              </div>
+            </div>
+            
+            <div class="progress-container" data-value="85">
+              <div class="progress-label">
+                <span>JavaScript</span>
+                <span class="progress-percentage">85%</span>
+              </div>
+              <div class="progress">
+                <div class="progress-bar" role="progressbar" style="width: 85%"></div>
+              </div>
+            </div>
+            
+            <div class="progress-container" data-value="80">
+              <div class="progress-label">
+                <span>React</span>
+                <span class="progress-percentage">80%</span>
+              </div>
+              <div class="progress">
+                <div class="progress-bar" role="progressbar" style="width: 80%"></div>
+              </div>
+            </div>
+            
+            <div class="progress-container" data-value="75">
+              <div class="progress-label">
+                <span>Node.js</span>
+                <span class="progress-percentage">75%</span>
+              </div>
+              <div class="progress">
+                <div class="progress-bar" role="progressbar" style="width: 75%"></div>
+              </div>
             </div>
           </div>
-        </div>
-
-        <div class="col-md-4 col-sm-6">
-          <div class="card h-100 shadow-sm">
-            <img
-              src="./img/pexels-ann-h-45017-14936128-1024x683.jpg"
-              class="card-img-top"
-              alt="..."
-            />
-            <div class="card-body text-center">
-              <h5 class="card-title">Portfolio Website</h5>
-              <p class="card-text">
-                Personal portfolio showcasing skills, resume, and projects.
-              </p>
-              <a
-                href="https://github.com/khushavnt-cognitiona/portfolio-website"
-                target="_blank"
-                class="btn btn-dark"
-              >
-                <i class="fab fa-github me-1"></i> Get Code
-              </a>
+          
+          <div class="col-md-6">
+            <div class="progress-container" data-value="85">
+              <div class="progress-label">
+                <span>Java</span>
+                <span class="progress-percentage">85%</span>
+              </div>
+              <div class="progress">
+                <div class="progress-bar" role="progressbar" style="width: 85%"></div>
+              </div>
             </div>
-          </div>
-        </div>
-
-        <div class="col-md-4 col-sm-6">
-          <div class="card h-100 shadow-sm">
-            <img
-              src="./img/Hospital-Information-Management-System-scaled.jpg"
-              class="card-img-top"
-              alt="..."
-            />
-            <div class="card-body text-center">
-              <h5 class="card-title">Hospital System</h5>
-              <p class="card-text">
-                Java + Spring Boot based hospital management backend system.
-              </p>
-              <a
-                href="https://github.com/khushavnt-cognitiona/Hospital"
-                target="_blank"
-                class="btn btn-dark"
-              >
-                <i class="fab fa-github me-1"></i> Get Code
-              </a>
+            
+            <div class="progress-container" data-value="80">
+              <div class="progress-label">
+                <span>Spring Boot</span>
+                <span class="progress-percentage">80%</span>
+              </div>
+              <div class="progress">
+                <div class="progress-bar" role="progressbar" style="width: 80%"></div>
+              </div>
             </div>
-          </div>
-        </div>
-
-        <div class="col-md-4 col-sm-6">
-          <div class="card h-100 shadow-sm">
-            <img
-              src="./img/install-java-raspberry-pi-300x200.jpg"
-              class="card-img-top"
-              alt="..."
-            />
-            <div class="card-body text-center">
-              <h5 class="card-title">Java Project</h5>
-              <p class="card-text">
-                Practical backend project implementing enterprise features.
-              </p>
-              <a
-                href="https://github.com/khushavnt-cognitiona/Hospital"
-                target="_blank"
-                class="btn btn-dark"
-              >
-                <i class="fab fa-github me-1"></i> Get Code
-              </a>
+            
+            <div class="progress-container" data-value="75">
+              <div class="progress-label">
+                <span>MySQL</span>
+                <span class="progress-percentage">75%</span>
+              </div>
+              <div class="progress">
+                <div class="progress-bar" role="progressbar" style="width: 75%"></div>
+              </div>
             </div>
-          </div>
-        </div>
-
-        <div class="col-md-4 col-sm-6">
-          <div class="card h-100 shadow-sm">
-            <img
-              src="./img/install-java-raspberry-pi-300x200.jpg"
-              class="card-img-top"
-              alt="..."
-            />
-            <div class="card-body text-center">
-              <h5 class="card-title">Another Java Project</h5>
-              <p class="card-text">
-                Object-oriented design and enterprise application features.
-              </p>
-              <a
-                href="https://github.com/khushavnt-cognitiona/Hospital"
-                target="_blank"
-                class="btn btn-dark"
-              >
-                <i class="fab fa-github me-1"></i> Get Code
-              </a>
+            
+            <div class="progress-container" data-value="70">
+              <div class="progress-label">
+                <span>Hibernate</span>
+                <span class="progress-percentage">70%</span>
+              </div>
+              <div class="progress">
+                <div class="progress-bar" role="progressbar" style="width: 70%"></div>
+              </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
-    <footer class="text-center">
+      
+      <!-- Skill Categories -->
+      <div class="skill-category">
+        <h2 class="mb-4">Skill Categories</h2>
+        
+        <div class="row">
+          <!-- Frontend Development -->
+          <div class="col-md-4 mb-4">
+            <div class="card skill-card">
+              <div class="card-body text-center">
+                <i class="fas fa-laptop-code skill-icon"></i>
+                <h3>Frontend Development</h3>
+                <ul class="list-unstyled">
+                  <li>HTML5, CSS3, SASS</li>
+                  <li>JavaScript, TypeScript</li>
+                  <li>React, Redux</li>
+                  <li>Bootstrap, Material UI</li>
+                  <li>Responsive Design</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Backend Development -->
+          <div class="col-md-4 mb-4">
+            <div class="card skill-card">
+              <div class="card-body text-center">
+                <i class="fas fa-server skill-icon"></i>
+                <h3>Backend Development</h3>
+                <ul class="list-unstyled">
+                  <li>Java, Spring Boot</li>
+                  <li>Node.js, Express</li>
+                  <li>RESTful APIs</li>
+                  <li>Microservices</li>
+                  <li>Authentication & Security</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Database & DevOps -->
+          <div class="col-md-4 mb-4">
+            <div class="card skill-card">
+              <div class="card-body text-center">
+                <i class="fas fa-database skill-icon"></i>
+                <h3>Database & DevOps</h3>
+                <ul class="list-unstyled">
+                  <li>MySQL, PostgreSQL</li>
+                  <li>MongoDB</li>
+                  <li>Git, GitHub</li>
+                  <li>Docker</li>
+                  <li>CI/CD Pipelines</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Certifications -->
+      <div class="skill-category">
+        <h2 class="mb-4">Certifications</h2>
+        
+        <div class="row">
+          <div class="col-md-6">
+            <div class="card certificate-card">
+              <div class="card-body">
+                <img src="./img/oracle-logo.png" alt="Oracle Logo" class="certificate-logo">
+                <h3>Oracle Certified Java Professional</h3>
+                <p>Credential ID: OCP12345</p>
+                <p>Issued: January 2022</p>
+              </div>
+            </div>
+          </div>
+          
+          <div class="col-md-6">
+            <div class="card certificate-card">
+              <div class="card-body">
+                <img src="./img/aws-logo.png" alt="AWS Logo" class="certificate-logo">
+                <h3>AWS Certified Developer Associate</h3>
+                <p>Credential ID: AWS54321</p>
+                <p>Issued: March 2023</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Projects -->
+      <div class="skill-category">
+        <h2 class="mb-4">Featured Projects</h2>
+        
+        <div class="row">
+          <div class="col-md-6 mb-4">
+            <div class="card h-100">
+              <div class="card-body">
+                <h3>E-Commerce Platform</h3>
+                <p>A full-stack e-commerce application with product catalog, shopping cart, and payment integration.</p>
+                <p><strong>Technologies:</strong> React, Node.js, MongoDB, Stripe</p>
+                <a href="#" class="btn btn-primary">View Project</a>
+              </div>
+            </div>
+          </div>
+          
+          <div class="col-md-6 mb-4">
+            <div class="card h-100">
+              <div class="card-body">
+                <h3>Task Management System</h3>
+                <p>A collaborative task management application with real-time updates and team collaboration features.</p>
+                <p><strong>Technologies:</strong> Spring Boot, React, MySQL, WebSockets</p>
+                <a href="#" class="btn btn-primary">View Project</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
       <div class="container">
-        <p>Connect with me:</p>
-        <a href="https://www.instagram.com/engineer_khushvant" target="_blank"
-          ><i class="fab fa-instagram"></i
-        ></a>
-        <a href="https://www.linkedin.com/in/khushvantjadhao01/" target="_blank"
-          ><i class="fab fa-linkedin"></i
-        ></a>
-        <a href="https://github.com/khushavnt-cognitiona" target="_blank"
-          ><i class="fab fa-github"></i
-        ></a>
-       
-
-        <p class="mt-3">&copy; 2025 Khushvant Jadhao</p>
+        <div class="text-center">
+          <h3>Connect with me</h3>
+          <div class="social-links">
+            <a href="https://www.instagram.com/engineer_khushvant" target="_blank" class="social-link" aria-label="Instagram">
+              <i class="fab fa-instagram"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/khushvantjadhao01/" target="_blank" class="social-link" aria-label="LinkedIn">
+              <i class="fab fa-linkedin"></i>
+            </a>
+            <a href="https://github.com/khushavnt-cognitiona" target="_blank" class="social-link" aria-label="GitHub">
+              <i class="fab fa-github"></i>
+            </a>
+          </div>
+          <p class="mt-3">&copy; 2025 Khushvant Jadhao. All rights reserved.</p>
+        </div>
       </div>
     </footer>
 
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="./assets/js/main.js"></script>
   </body>
 </html>
